@@ -23,7 +23,10 @@ app.get("/", (req, res) => {
             { method: "GET", path: "/api/users", description: "Lista todos los usuarios" },
             { method: "GET", path: "/api/users/:id", description: "Obtiene un usuario por ID" },
             { method: "GET", path: "/api/movies", description: "Lista todas las películas (soporta paginado)" },
-            { method: "GET", path: "/api/movies/:id", description: "Obtiene una película por ID" }
+            { method: "GET", path: "/api/movies/:id", description: "Obtiene una película por ID" },
+            { method: "GET", path: "/api/movies/awards", description: "Obtiene películas ganadoras de al menos un premio"},
+			{method: "GET", path: "/api/movies/languages", description:"Obtiene películas filtradas por idioma (soporta paginado)"},
+			{method: "GET", path: "/api/movies/fresh",description: "Obtiene películas ordenadas por puntaje 'fresh' de mayor a menor"}
         ],
         pagination: {
             endpoint: "/api/movies",
